@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Deals Hub | Affiliate Picks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="top-nav container">
+      <div class="brand">
+        <span class="brand-badge">★</span>
+        <span>Daily Deals Hub</span>
+      </div>
+      <a class="cta" href="#post-form">Post Today's Link</a>
+    </nav>
+
+    <div class="hero-content container">
+      <p class="eyebrow">Affiliate Marketing Website</p>
+      <h1>Post your best affiliate links every day like a pro.</h1>
+      <p class="subtext">Showcase trusted products, grow your audience, and make your daily recommendations look premium.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#today-list">View Today's Links</a>
+        <a class="btn btn-secondary" href="#post-form">Create New Post</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="stats-grid" aria-label="Website stats">
+      <article class="stat-card">
+        <p class="label">Daily Posts</p>
+        <p class="value" id="post-count">0</p>
+      </article>
+      <article class="stat-card">
+        <p class="label">Average Discount</p>
+        <p class="value">Up to 60%</p>
+      </article>
+      <article class="stat-card">
+        <p class="label">Categories</p>
+        <p class="value">Tech, Beauty, Home</p>
+      </article>
+    </section>
+
+    <section id="today-list" class="panel">
+      <div class="panel-heading">
+        <h2>Today's Affiliate Links</h2>
+        <p>Fresh picks your customers can shop right now.</p>
+      </div>
+      <div id="link-grid" class="link-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="post-form" class="panel">
+      <div class="panel-heading">
+        <h2>Add Daily Affiliate Post</h2>
+        <p>Fill this form to publish your customer-ready link card.</p>
+      </div>
+
+      <form id="affiliate-form" class="form-grid">
+        <label>
+          Product Name
+          <input type="text" id="product" placeholder="Example: Smart Watch Pro" required />
+        </label>
+
+        <label>
+          Category
+          <input type="text" id="category" placeholder="Example: Tech" required />
+        </label>
+
+        <label>
+          Discount Text
+          <input type="text" id="discount" placeholder="Example: 35% OFF" required />
+        </label>
+
+        <label class="full-width">
+          Affiliate URL
+          <input type="url" id="url" placeholder="https://your-affiliate-link.com" required />
+        </label>
+
+        <label class="full-width">
+          Why Should They Buy?
+          <textarea id="description" rows="4" placeholder="Write one short, convincing line..." required></textarea>
+        </label>
+
+        <button type="submit" class="btn btn-primary full-width">Publish Daily Link</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>© <span id="year"></span> Daily Deals Hub. Built for daily affiliate posting.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
